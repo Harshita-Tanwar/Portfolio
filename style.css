@@ -1,0 +1,353 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Home Page */
+#home {
+    background: url('bg3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%; 
+}
+
+#home h1 {
+    font-size: 5rem;
+    overflow: hidden; /* Hides the part of the text that is not yet typed */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    border-right: 0.1em solid #8d1364; /* Creates the typing cursor effect */
+    width: 0; /* Initially no text is visible */
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Keyframes for blinking cursor */
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Makes the cursor disappear at 50% of the time */
+    }
+}
+
+
+
+/* Learn More Page Background Image */
+body.learn-more {
+    background: url('bg5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Profile Image Styling */
+#about img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+/* Ribbon Styles */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #dd3464;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header nav a {
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+header nav a:hover {
+    background-color:#e99fb4 ;
+    border-radius: 5px;
+}
+
+/* Section Styling */
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* About Section Styling */
+#about {
+    background: url('stars-galaxy.gif');
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+#about .about-container {
+    max-width: 800px; /* Maximum width for better readability */
+    margin: 0 auto; /* Center the container */
+    text-align: center; /* Ensure content inside the container is centered */
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 1rem;
+    color: #8ed7f1; /* Adjust text color for better visibility */
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 10px;
+    color: #ffffff; /* Lighter text color for better contrast */
+}
+
+/* Profile Image Styling */
+#about img {
+    width: 250px;  /* Set a fixed width */
+    height: 250px;  /* Maintain aspect ratio */
+    border-radius: 50%;
+    margin-bottom: 20px; /* Spacing between image and text */
+}
+
+
+/* Projects Section */
+#projects {
+    background: url('bg5.jpg');
+    background-color: #f7f7f7;
+    padding: 2rem;
+}
+
+#projects h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+#projects h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #f4f4f9;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project {
+    width: 45%;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    position:absolute;
+    width: 100%; 
+}
+
+footer p {
+    size: 5rem;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Social Icons Styling */
+.social-icons {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 5px; /* Space between the icons */
+}
+
+/* Social Icon Images (Very Small Size) */
+.social-icon {
+    text-decoration: none;  
+    width: 20px;  /* Very small icon size */
+    height: 20px;  /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+}
+.social-icons p {
+    margin-top: 10px;  /* Add some margin if needed for spacing */
+    color: black;  /* Set the color of the text */
+}
+
+.social-icons a:hover {
+    text-decoration: none;  /* Ensures no underline on hover */
+}
+/* Hover effect on social icons */
+.social-icon:hover {
+    transform: scale(1.1); /* Slight scale-up effect on hover */
+}
+
+/* "Click To Know More About Me" Button Styling */
+#home .cta-button {
+    padding: 15px 30px;
+    background-color: #a4267a; /* Primary background color */
+    color: rgb(227, 107, 107);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px; /* Rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase; /* Makes text uppercase */
+    letter-spacing: 1px; /* Adds space between letters */
+}
+
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 14px 30px; /* Add some padding */
+    font-size: 16px; /* Increase font size */
+    border: none; /* Remove default border */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-transform: uppercase; /* Uppercase text */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #45a049; /* Darker green when hovered */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Larger shadow effect */
+}
+
+#home .home-content h1 {
+    font-size: 2.7rem; /* Increase font size for the main heading */
+}
+
+#home .home-content p {
+    font-size: 1.3rem; /* Increase font size for the paragraph */
+}
+
+/* Education Section Styling */
+#education {
+    max-width: 800px; /* Limits the width for better readability */
+    margin: 40px auto; /* Centers the section with top/bottom spacing */
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff; /* Light background for better contrast */
+    box-shadow: 0 4px 8px rgba(7, 7, 7, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  /* Center the Heading */
+  #education h2 {
+    text-align: center;
+    font-size: 2rem; /* Larger font for heading */
+    color: #677745; /* Darker color for visibility */
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Left-align the Paragraphs */
+  #education p {
+    text-align: left; /* Aligns text to the left */
+    margin-bottom: 15px; /* Adds spacing between paragraphs */
+    font-size: 1.1rem; /* Standard readable font size */
+    color: #191717; /* Slightly muted text color */
+  }
+  
+  /* General Margins and Spacing */
+  body {
+    background: url('stars-galaxy.gif');
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Light gray background for the page */
+  }
+  
+  .social-icon {
+    width: 50px; /* Increase the size of the icons */
+    height: 50px; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth animation for hover effect */
+}
+
+/* Hover effect to make icons grow slightly */
+.social-icon:hover {
+    transform: scale(1.2); /* Enlarge icon on hover */
+}
+
+
+.project {
+    text-align: center; /* Centers the content within each project */
+}
+.projects-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically if needed */
+    gap: 20px; /* Adds space between the items */
+    text-align: center; /* Centers text inside each project */
+    margin: 0 auto; /* Ensures the container is centered */
+    padding: 20px;
+}
+
+.project img {
+    max-width: 100%; /* Ensures the images are responsive */
+    height: auto;
+    margin-bottom: 10px; /* Adds spacing between the image and the title */
+}
+
+#achievements h2 {
+    font-size: 2rem; /* Increase the font size */
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Add some spacing below the heading */
+    color: #c3f160;
+}
+/* Styling for "Contact Me" heading */
+#contact h2 {
+    color: #c3f160; /* Change to your desired color */
+    font-size: 2rem; /* Adjust the font size */
+    text-align: center; /* Center align the text */
+    margin-bottom: 1rem; /* Add spacing below the heading */
+    font-weight: bold; /* Make the text bold */
+    letter-spacing: 1px; /* Add space between letters for better visibility */
+}
+#achievements p{
+    color: #f4f4f9;
+}
+#achievements h3{
+    color: #a2a2cc;
+}
